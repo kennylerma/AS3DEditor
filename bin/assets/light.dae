@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.77.0 commit date:2016-04-05, commit time:18:12, hash:abf6f08</authoring_tool>
+    </contributor>
+    <created>2016-12-08T12:35:35</created>
+    <modified>2016-12-08T12:35:35</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_images/>
+  <library_effects>
+    <effect id="BoxMat-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.8 0.8 0.8 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.5 0.5 0.5 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="BulbMat-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.8 0.7515951 0.3300146 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.5 0.5 0.5 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="BoxMat-material" name="BoxMat">
+      <instance_effect url="#BoxMat-effect"/>
+    </material>
+    <material id="BulbMat-material" name="BulbMat">
+      <instance_effect url="#BulbMat-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Box-mesh" name="Box">
+      <mesh>
+        <source id="Box-mesh-positions">
+          <float_array id="Box-mesh-positions-array" count="24">-1 -1 -1 -0.02922391 -0.02922391 1 -1 1 -1 -0.02922391 0.02922391 1 1 -1 -1 0.02922391 -0.02922391 1 1 1 -1 0.02922391 0.02922391 1</float_array>
+          <technique_common>
+            <accessor source="#Box-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box-mesh-normals">
+          <float_array id="Box-mesh-normals-array" count="27">-0.8996233 0 0.4366667 0 0.8996238 0.436666 0.8996233 0 0.4366667 0 -0.8996238 0.436666 0 0 1 -0.8996236 0 0.4366665 0 0.8996236 0.4366665 0.8996236 0 0.4366665 0 -0.8996236 0.4366665</float_array>
+          <technique_common>
+            <accessor source="#Box-mesh-normals-array" count="9" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Box-mesh-vertices">
+          <input semantic="POSITION" source="#Box-mesh-positions"/>
+        </vertices>
+        <polylist material="BoxMat-material" count="10">
+          <input semantic="VERTEX" source="#Box-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Box-mesh-normals" offset="1"/>
+          <vcount>3 3 3 3 3 3 3 3 3 3 </vcount>
+          <p>3 0 0 0 1 0 7 1 2 1 3 1 5 2 6 2 7 2 1 3 4 3 5 3 7 4 1 4 5 4 3 5 2 5 0 5 7 6 6 6 2 6 5 7 4 7 6 7 1 8 0 8 4 8 7 4 3 4 1 4</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="Bulb-mesh" name="Bulb">
+      <mesh>
+        <source id="Bulb-mesh-positions">
+          <float_array id="Bulb-mesh-positions-array" count="126">0 0 -0.9090095 0.4292884 -0.3118926 -0.5810661 -0.1639704 -0.5046575 -0.5810663 -0.5306288 0 -0.5810638 -0.1639704 0.5046575 -0.5810663 0.4292884 0.3118926 -0.5810661 0.1639704 -0.5046575 -0.05042952 -0.4292884 -0.3118926 -0.05042976 -0.4292884 0.3118926 -0.05042976 0.1639704 0.5046575 -0.05042952 0.5306288 0 -0.05043202 0 0 0.2775137 -0.09637862 -0.296628 -0.8204085 0.2523276 -0.1833246 -0.8204084 0.15595 -0.4799555 -0.6276479 0.5046567 0 -0.6276468 0.2523276 0.1833246 -0.8204084 -0.3118953 0 -0.8204069 -0.4082763 -0.296629 -0.6276471 -0.09637862 0.296628 -0.8204085 -0.4082763 0.296629 -0.6276471 0.15595 0.4799555 -0.6276479 0.5642261 -0.1833253 -0.3157479 0.5642261 0.1833253 -0.3157479 0 -0.5932615 -0.3157479 0.3487106 -0.4799585 -0.3157479 -0.5642261 -0.1833253 -0.3157479 -0.3487106 -0.4799585 -0.3157479 -0.3487106 0.4799585 -0.3157479 -0.5642261 0.1833253 -0.3157479 0.3487106 0.4799585 -0.3157479 0 0.5932615 -0.3157479 0.4082763 -0.296629 -0.003848791 -0.15595 -0.4799555 -0.003847956 -0.5046567 0 -0.003848969 -0.15595 0.4799555 -0.003847956 0.4082763 0.296629 -0.003848791 0.09637862 -0.296628 0.1889126 0.3118953 0 0.188911 -0.2523276 -0.1833246 0.1889125 -0.2523276 0.1833246 0.1889125 0.09637862 0.296628 0.1889126</float_array>
+          <technique_common>
+            <accessor source="#Bulb-mesh-positions-array" count="42" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Bulb-mesh-normals">
+          <float_array id="Bulb-mesh-normals-array" count="240">0.1023809 -0.3150898 -0.9435236 0.7002242 -0.2680317 -0.6616986 -0.2680339 -0.1947365 -0.9435229 -0.2680339 0.1947365 -0.9435229 0.1023809 0.3150898 -0.9435236 0.9049892 -0.2680312 -0.3303846 0.02474647 -0.9435214 -0.3303862 -0.8896974 -0.3150944 -0.3303847 -0.5746018 0.7487836 -0.3303875 0.5345759 0.7778646 -0.3303866 0.8026092 -0.5831265 -0.1256272 -0.3065689 -0.9435217 -0.1256286 -0.9920774 0 -0.1256282 -0.3065689 0.9435217 -0.1256286 0.8026092 0.5831265 -0.1256272 0.408946 -0.6284252 0.6616986 -0.4712997 -0.5831223 0.6616986 -0.7002241 0.2680317 0.6616988 0.0385304 0.7487791 0.6616988 0.7240422 0.1947362 0.6616954 0.2680341 0.1947367 0.9435229 0.4911193 0.3568211 0.7946575 0.408946 0.6284252 0.6616985 -0.1023808 0.3150899 0.9435235 -0.1875941 0.5773454 0.7946577 -0.4712997 0.5831224 0.6616986 -0.3313044 0 0.943524 -0.6070607 0 0.7946556 -0.7002241 -0.2680317 0.6616988 -0.1023808 -0.3150899 0.9435235 -0.1875941 -0.5773454 0.7946577 0.0385304 -0.7487791 0.6616988 0.2680341 -0.1947367 0.9435229 0.4911193 -0.3568212 0.7946575 0.7240422 -0.1947362 0.6616954 0.8896974 0.3150945 0.3303847 0.7946556 0.5773481 0.187595 0.5746018 0.7487836 0.3303875 -0.02474653 0.9435214 0.3303863 -0.3035309 0.9341715 0.1875972 -0.5345759 0.7778646 0.3303866 -0.9049893 0.2680312 0.3303846 -0.9822458 0 0.1875984 -0.9049893 -0.2680312 0.3303846 -0.5345759 -0.7778646 0.3303866 -0.3035309 -0.9341715 0.1875972 -0.02474653 -0.9435214 0.3303863 0.5746018 -0.7487836 0.3303875 0.7946556 -0.5773481 0.187595 0.8896974 -0.3150945 0.3303847 0.3065689 0.9435216 0.1256285 0.3035309 0.9341715 -0.1875972 0.02474647 0.9435214 -0.3303862 -0.802609 0.5831266 0.1256273 -0.7946557 0.577348 -0.187595 -0.8896974 0.3150944 -0.3303847 -0.8026091 -0.5831266 0.1256273 -0.7946557 -0.577348 -0.187595 -0.5746018 -0.7487837 -0.3303876 0.3065689 -0.9435216 0.1256285 0.3035309 -0.9341715 -0.1875972 0.534576 -0.7778646 -0.3303866 0.9920774 0 0.1256282 0.9822459 0 -0.1875985 0.9049892 0.2680312 -0.3303847 0.4712993 0.5831225 -0.6616987 0.1875946 0.5773454 -0.7946577 -0.03853046 0.7487792 -0.6616987 -0.408946 0.6284254 -0.6616984 -0.4911198 0.356821 -0.7946574 -0.7240422 0.1947362 -0.6616954 -0.7240422 -0.1947362 -0.6616954 -0.4911196 -0.356821 -0.7946574 -0.408946 -0.6284254 -0.6616984 0.7002242 0.2680317 -0.6616986 0.6070608 0 -0.7946554 0.3313041 0 -0.9435241 -0.03853046 -0.7487792 -0.6616987 0.1875947 -0.5773453 -0.7946575 0.4712993 -0.5831225 -0.6616987</float_array>
+          <technique_common>
+            <accessor source="#Bulb-mesh-normals-array" count="80" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Bulb-mesh-vertices">
+          <input semantic="POSITION" source="#Bulb-mesh-positions"/>
+        </vertices>
+        <polylist material="BulbMat-material" count="80">
+          <input semantic="VERTEX" source="#Bulb-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Bulb-mesh-normals" offset="1"/>
+          <vcount>3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 </vcount>
+          <p>0 0 13 0 12 0 1 1 13 1 15 1 0 2 12 2 17 2 0 3 17 3 19 3 0 4 19 4 16 4 1 5 15 5 22 5 2 6 14 6 24 6 3 7 18 7 26 7 4 8 20 8 28 8 5 9 21 9 30 9 1 10 22 10 25 10 2 11 24 11 27 11 3 12 26 12 29 12 4 13 28 13 31 13 5 14 30 14 23 14 6 15 32 15 37 15 7 16 33 16 39 16 8 17 34 17 40 17 9 18 35 18 41 18 10 19 36 19 38 19 38 20 41 20 11 20 38 21 36 21 41 21 36 22 9 22 41 22 41 23 40 23 11 23 41 24 35 24 40 24 35 25 8 25 40 25 40 26 39 26 11 26 40 27 34 27 39 27 34 28 7 28 39 28 39 29 37 29 11 29 39 30 33 30 37 30 33 31 6 31 37 31 37 32 38 32 11 32 37 33 32 33 38 33 32 34 10 34 38 34 23 35 36 35 10 35 23 36 30 36 36 36 30 37 9 37 36 37 31 38 35 38 9 38 31 39 28 39 35 39 28 40 8 40 35 40 29 41 34 41 8 41 29 42 26 42 34 42 26 43 7 43 34 43 27 44 33 44 7 44 27 45 24 45 33 45 24 46 6 46 33 46 25 47 32 47 6 47 25 48 22 48 32 48 22 49 10 49 32 49 30 50 31 50 9 50 30 51 21 51 31 51 21 52 4 52 31 52 28 53 29 53 8 53 28 54 20 54 29 54 20 55 3 55 29 55 26 56 27 56 7 56 26 57 18 57 27 57 18 58 2 58 27 58 24 59 25 59 6 59 24 60 14 60 25 60 14 61 1 61 25 61 22 62 23 62 10 62 22 63 15 63 23 63 15 64 5 64 23 64 16 65 21 65 5 65 16 66 19 66 21 66 19 67 4 67 21 67 19 68 20 68 4 68 19 69 17 69 20 69 17 70 3 70 20 70 17 71 18 71 3 71 17 72 12 72 18 72 12 73 2 73 18 73 15 74 16 74 5 74 15 75 13 75 16 75 13 76 0 76 16 76 12 77 14 77 2 77 12 78 13 78 14 78 13 79 1 79 14 79</p>
+        </polylist>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_controllers/>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Box" name="Box" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Box-mesh" name="Box">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="BoxMat-material" target="#BoxMat-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Bulb" name="Bulb" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Bulb-mesh" name="Bulb">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="BulbMat-material" target="#BulbMat-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<application xmlns="http://ns.adobe.com/air/application/30.0">
+  <id>AS3DEditor</id>
+  <versionNumber>1.0</versionNumber>
+  <filename>AS3DEditor</filename>
+  <name>AS3DEditor</name>
+  <initialWindow>
+    <title>AS3DEditor</title>
+    <content>AS3DEditor.swf</content>
+    <systemChrome>standard</systemChrome>
+    <transparent>false</transparent>
+    <visible>true</visible>
+    <minimizable>true</minimizable>
+    <maximizable>true</maximizable>
+    <resizable>true</resizable>
+    <fullScreen>true</fullScreen>
+    <requestedDisplayResolution>high</requestedDisplayResolution>
+    <renderMode>direct</renderMode>
+    <depthAndStencil>true</depthAndStencil>
+    <x>0</x>
+    <y>0</y>
+  </initialWindow>
+  <supportedProfiles>extendedDesktop</supportedProfiles>
+  <android>
+    <manifestAdditions><![CDATA[<manifest android:installLocation="auto" xmlns:android="http://schemas.android.com/apk/res/android" />]]></manifestAdditions>
+  </android>
+</application>
