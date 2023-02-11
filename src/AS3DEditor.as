@@ -80,22 +80,29 @@ package
 			
 			/*var daeLoader2:DAELoader = new DAELoader("assets/light.dae");
 			daeLoader2.load();
+			*/
 			
-			var plane:Plane = new Plane("My Plane", 150, 150);
+			/*var plane:Plane = new Plane("My Plane", 150, 150);
+			plane.moveDown(10);
 			_scene.addChild(plane);
+			_tabMenu.addToHierarchy(plane);*/
 			
-			var cube:Cube = new Cube("My Cube", 50);
+			var cube:Cube = new Cube("My Cube", 10);
 			cube.moveUp(25);
 			cube.moveForward(50);
-			cube.moveRight(25);
+			cube.moveRight(12);
 			_scene.addChild(cube);
+			_tabMenu.addToHierarchy(cube);
 			
-			var sphere:Sphere = new Sphere("My Sphere", 50, 50);
+			var sphere:Sphere = new Sphere("My Sphere", 100, 100);
+			sphere.scale(7);
 			sphere.moveUp(.5);
 			sphere.moveForward(.5);
-			sphere.moveLeft(.8);
+			sphere.rotateY(180);
+			sphere.moveRight(2);
 			_scene.addChild(sphere);
-			*/
+			_tabMenu.addToHierarchy(sphere);
+			
 			var lines:Lines3D = new Lines3D();
 			//_scene.addChild(lines);
 		}
